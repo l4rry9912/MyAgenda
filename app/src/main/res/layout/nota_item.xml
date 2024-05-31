@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/yellow"
+        app:cardElevation="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+        <ImageView
+            android:id="@+id/imgIcono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chicheta"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+
+            <TextView
+                android:id="@+id/textViewTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Título"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/letra"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/textViewDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripcion"
+                android:fontFamily="@font/letra"
+                android:textSize="20dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/textViewContenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contenido"
+                android:fontFamily="@font/letra"
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/textViewFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:layout_gravity="right"
+                android:paddingTop="10dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

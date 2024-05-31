@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentos.AjustesFragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- Imagen del usuario en el centro -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:background="@color/orange">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:src="@drawable/foto" />
+        </LinearLayout>
+
+        <!-- Parte inferior (80%) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <!-- Otros elementos de ajustes se pueden agregar aquí -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Botón de cierre de sesión en la parte inferior -->
+    <Button
+        android:id="@+id/btnAjustes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar sesion"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"/>
+</FrameLayout>
+

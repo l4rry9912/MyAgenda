@@ -1,0 +1,100 @@
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/yellow">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TVTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/letra"
+                android:textSize="50dp"
+                android:text="Título"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingTop="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/TVDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/letra"
+                android:textSize="30dp"
+                android:text="Descripción"
+                android:paddingTop="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/TVContenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/letra"
+                android:textSize="20dp"
+                android:text="Contenido"
+                android:paddingTop="20dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/TVFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:layout_gravity="end"
+                android:paddingTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/Btn_modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/letra"
+                    android:textSize="20sp"
+                    android:text="Modificar"/>
+
+                <Button
+                    android:id="@+id/Btn_eliminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/letra"
+                    android:textSize="20sp"
+                    android:text="Eliminar"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

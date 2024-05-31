@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:padding="20dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="500dp"
+            android:layout_height="300dp"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_fileName="Calendar.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/Btn_Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Btn_Login"
+            android:textColor="@color/gray"
+            android:textSize="25dp"
+            android:fontFamily="@font/letra" />
+        <Button
+            android:id="@+id/Btn_Registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Btn_Registro"
+            android:textColor="@color/gray"
+            android:textSize="25dp"
+            android:fontFamily="@font/letra"
+            android:layout_marginTop="5dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Escala la vista de 0.8x (tamaño reducido) a 1x (tamaño normal) -->
+    <scale
+        android:duration="150"
+        android:fromXScale="0.8"
+        android:fromYScale="0.8"
+        android:toXScale="1.0"
+        android:toYScale="1.0"
+        android:pivotX="50%"
+        android:pivotY="50%" />
+
+    <!-- Cambia la opacidad de la vista de 0.0 (invisible) a 1.0 (totalmente visible) -->
+    <alpha
+        android:duration="300"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+</set>

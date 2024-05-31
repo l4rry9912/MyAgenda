@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">My Agenda</string>
+
+    <!--MAIN ACTIVITY / LOGIN -->
+    <string name="Btn_Login">Login</string>
+    <string name="Btn_Registro">Registro</string>
+
+    <!--LOGIN ACTIVITY-->
+    <string name="titulo_Log">Iniciar sesion</string>
+    <string name="correo_login">Correo</string>
+    <string name="contraseña_login">Contraseña</string>
+    <string name="Btn_Ingresar">Ingresar</string>
+    <string name="registro">¿No tienes cuenta?. Registrate</string>
+
+    <!--REGISTRO ACTIVITY-->
+    <string name="titulo_reg">Crea una cuenta</string>
+    <string name="nombres">¿Cual es tu nombre?</string>
+    <string name="correo_reg">Correo</string>
+    <string name="contraseña_reg">Contraseña</string>
+    <string name="confirmar_con">Confirmar contraseña</string>
+    <string name="Btn_registro">Registrar</string>
+    <string name="login">Tengo una cuenta</string>
+
+    <!--FRAGMENT NOTAS-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agregar_nota">Agregar nota</string>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/bg_rounded_spinner</item>
+        <item name="android:gravity">center</item>
+        <item name="android:backgroundTint">@color/orange1</item>
+    </style>
+
+</resources>

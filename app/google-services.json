@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "403660828902",
+    "project_id": "my-agenda-54f60",
+    "storage_bucket": "my-agenda-54f60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403660828902:android:e1e0bced501a8f42924b27",
+        "android_client_info": {
+          "package_name": "com.larry.myagenda"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6-fpFHu15K5l6FnXeS2I4k2ATcckNOro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
