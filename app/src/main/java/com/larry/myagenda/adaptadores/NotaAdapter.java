@@ -60,7 +60,6 @@ public class NotaAdapter extends RecyclerView.Adapter<NotaAdapter.NotaViewHolder
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Si se ha establecido el listener de clics en las notas, llamar a su método onNotaClick
                 if (onNotaClickListener != null) {
                     onNotaClickListener.onNotaClick(nota);
                 }
@@ -78,10 +77,8 @@ public class NotaAdapter extends RecyclerView.Adapter<NotaAdapter.NotaViewHolder
     public static class NotaViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewTitulo, textViewDescripcion, textViewFecha, textViewContenido;
 
-        // Constructor que recibe la vista inflada
         public NotaViewHolder(View view) {
             super(view);
-            // Obtener referencias a los TextViews dentro de la vista
             textViewTitulo = view.findViewById(R.id.textViewTitulo);
             textViewDescripcion = view.findViewById(R.id.textViewDescripcion);
             textViewContenido = view.findViewById(R.id.textViewContenido);

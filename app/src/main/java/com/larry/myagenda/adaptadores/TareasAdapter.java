@@ -41,23 +41,18 @@ public class TareasAdapter extends RecyclerView.Adapter<TareasAdapter.TareaViewH
 
         // Manejar el doble clic en la tarea
         holder.itemView.setOnClickListener(new View.OnClickListener() {
-            private static final long DOUBLE_CLICK_TIME_DELTA = 300; // Intervalo de tiempo para considerar un doble clic en milisegundos
+            private static final long DOUBLE_CLICK_TIME_DELTA = 300;
             private long lastClickTime = 0;
 
             @Override
             public void onClick(View v) {
-                // Obtener el tiempo actual en milisegundos
                 long clickTime = System.currentTimeMillis();
 
-                // Verificar si es un doble clic
                 if (clickTime - lastClickTime < DOUBLE_CLICK_TIME_DELTA) {
-                    // Es un doble clic, llamar al método del listener
                     if (tareaDoubleClickListener != null) {
                         tareaDoubleClickListener.onTareaDoubleClick(tarea);
                     }
                 }
-
-                // Actualizar el tiempo del último clic
                 lastClickTime = clickTime;
             }
         });

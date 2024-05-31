@@ -71,7 +71,6 @@ public class FragmentNota extends Fragment {
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Mostrar un cuadro de diálogo de confirmación
                 AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
                 builder.setTitle("Confirmar eliminación");
                 builder.setMessage("¿Estás seguro de que quieres eliminar esta nota?");
@@ -85,7 +84,6 @@ public class FragmentNota extends Fragment {
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        // No hacer nada, el usuario ha cancelado la operación
                     }
                 });
                 builder.show();
@@ -141,13 +139,9 @@ public class FragmentNota extends Fragment {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
-                        // Notificar al usuario que la nota se eliminó con éxito
                         Toast.makeText(requireContext(), "Nota eliminada correctamente", Toast.LENGTH_SHORT).show();
-
-                        // Cierra el fragmento actual y vuelve al fragmento anterior
                         getParentFragmentManager().popBackStack();
                     } else {
-                        // Notificar al usuario si hay algún error al eliminar la nota
                         Toast.makeText(requireContext(), "Error al eliminar la nota", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -159,8 +153,6 @@ public class FragmentNota extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == AGREGAR_NOTA_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            // El resultado es RESULT_OK, lo que indica que la nota se guardó exitosamente
-            // Cerrar el fragmento
             getParentFragmentManager().popBackStack();
         }
     }

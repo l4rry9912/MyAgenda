@@ -13,13 +13,13 @@ import com.larry.myagenda.objetos.Iconos;
 import java.util.List;
 public class IconosAdapter extends RecyclerView.Adapter<IconosAdapter.IconoViewHolder> {
 
-    private List<Iconos> iconosList; // Lista de íconos
-    private OnIconoClickListener listener; // Listener para los clics en los íconos
+    private List<Iconos> iconosList;
+    private OnIconoClickListener listener;
     private Iconos iconoSeleccionado;
 
     // Constructor del adaptador
     public IconosAdapter(List<Iconos> iconosList) {
-        this.iconosList = iconosList; // Inicializamos la lista de íconos
+        this.iconosList = iconosList;
     }
 
     // Método llamado cuando se necesita crear un nuevo ViewHolder
@@ -34,11 +34,8 @@ public class IconosAdapter extends RecyclerView.Adapter<IconosAdapter.IconoViewH
     // Método llamado para asociar datos a un ViewHolder existente
     @Override
     public void onBindViewHolder(@NonNull IconoViewHolder holder, int position) {
-        // Obtenemos el objeto Iconos correspondiente a la posición dada
         Iconos icono = iconosList.get(position);
-        // Establecemos la imagen del ícono en el ImageView del ViewHolder
         holder.iconoImageView.setImageResource(icono.getImagenId());
-        // Establecemos el nombre del calendario en el TextView correspondiente
         holder.calendarionombreT.setText(icono.getNombre());
 
         // Verificamos si este ícono es el ícono seleccionado y actualizamos su apariencia
@@ -63,7 +60,6 @@ public class IconosAdapter extends RecyclerView.Adapter<IconosAdapter.IconoViewH
                 if (listener != null) {
                     listener.onIconoClick(icono);
                 }
-                // Actualizamos el ícono seleccionado y notificamos los cambios
                 iconoSeleccionado = icono;
                 notifyDataSetChanged();
             }
@@ -76,11 +72,9 @@ public class IconosAdapter extends RecyclerView.Adapter<IconosAdapter.IconoViewH
         return iconosList.size();
     }
 
-    // Clase interna que representa un ViewHolder para los íconos
     public class IconoViewHolder extends RecyclerView.ViewHolder {
-        ImageView iconoImageView; // ImageView para mostrar el ícono
-        TextView calendarionombreT; // TextView para mostrar el nombre del calendario
-
+        ImageView iconoImageView;
+        TextView calendarionombreT;
         // Constructor del ViewHolder
         public IconoViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -89,13 +83,9 @@ public class IconosAdapter extends RecyclerView.Adapter<IconosAdapter.IconoViewH
             calendarionombreT = itemView.findViewById(R.id.calendarionombreT);
         }
     }
-
-    // Interfaz que define el método para manejar los clics en los íconos
     public interface OnIconoClickListener {
         void onIconoClick(Iconos icono);
     }
-
-    // Método para establecer un listener para manejar los clics en los íconos
     public void setOnIconoClickListener(OnIconoClickListener listener) {
         this.listener = listener;
     }

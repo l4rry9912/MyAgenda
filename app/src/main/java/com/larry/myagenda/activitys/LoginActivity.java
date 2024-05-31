@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                progressDialog.dismiss(); // Oculta el ProgressDialog.
+                                progressDialog.dismiss();
 
                                 if (task.isSuccessful()){
                                     // Si la autenticación es exitosa, abre la actividad del menú principal.

@@ -213,7 +213,6 @@ public class CalendarioAdapter extends BaseAdapter {
                     break;
                 }
             } while (cursor.moveToNext());
-            // Cerrar el cursor
             cursor.close();
         }
         return hayTareas;

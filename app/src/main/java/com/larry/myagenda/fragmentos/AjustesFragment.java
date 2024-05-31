@@ -36,11 +36,7 @@ public class AjustesFragment extends Fragment {
     private void cerrarSesion() {
         // Cerrar la sesión de Firebase
         FirebaseAuth.getInstance().signOut();
-
-        // Mostrar el Toast
         Toast.makeText(getActivity(), "Hasta pronto", Toast.LENGTH_SHORT).show();
-
-        // Redirigir a la actividad de inicio de sesión
         Intent intent = new Intent(getActivity(), MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Borrar el historial de actividades
         startActivity(intent);

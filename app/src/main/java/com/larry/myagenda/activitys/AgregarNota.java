@@ -94,7 +94,6 @@ public class AgregarNota extends AppCompatActivity {
                 if (notaActual == null) {
                     notaId = userNotesRef.push().getKey();
                 } else {
-                    // Si la nota actual no es nula, significa que estamos editando una nota existente
                     notaId = notaActual.getId();
                 }
 
@@ -105,13 +104,12 @@ public class AgregarNota extends AppCompatActivity {
                 userNotesRef.child(notaId).setValue(nota);
                 Toast.makeText(AgregarNota.this, "Nota guardada exitosamente", Toast.LENGTH_SHORT).show();
                 setResult(Activity.RESULT_OK);
-                finish();// Finalizar la actividad después de guardar la nota
+                finish();
             } else {
-                // Mostrar un mensaje si no hay cambios en la nota
+
                 Toast.makeText(AgregarNota.this, "No se realizaron cambios en la nota", Toast.LENGTH_SHORT).show();
             }
         } else {
-            // Mostrar un mensaje de error si el título está vacío
             Toast.makeText(AgregarNota.this, "Por favor, ingresa un título para la nota", Toast.LENGTH_SHORT).show();
         }
     }

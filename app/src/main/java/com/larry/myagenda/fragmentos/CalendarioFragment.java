@@ -123,8 +123,6 @@ public class CalendarioFragment extends Fragment {
                 // Obtener el mes y año seleccionados de los Spinners
                 int mesSeleccionado = obtenerMes(spinnerMes.getSelectedItem().toString());
                 int añoSeleccionado = Integer.parseInt(spinnerAño.getSelectedItem().toString());
-
-                // Crear un Intent para iniciar la actividad AgregarTareaActivity
                 Intent intent = new Intent(requireContext(), AgregarTareaActivity.class);
 
                 // Pasa el día, mes, año y ID del calendario como extras al Intent
@@ -132,8 +130,6 @@ public class CalendarioFragment extends Fragment {
                 intent.putExtra("mesSeleccionado", mesSeleccionado);
                 intent.putExtra("añoSeleccionado", añoSeleccionado);
                 intent.putExtra("calendarioId", calendarioId);
-
-                // Inicia la actividad con el Intent
                 startActivity(intent);
             }
         });
@@ -178,7 +174,7 @@ public class CalendarioFragment extends Fragment {
                 return i;
             }
         }
-        return -1; // Si no se encuentra el nombre del mes
+        return -1;
     }
 }
 

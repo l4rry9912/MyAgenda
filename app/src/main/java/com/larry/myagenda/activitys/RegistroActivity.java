@@ -105,21 +105,16 @@ public class RegistroActivity extends AppCompatActivity {
                                         .build());
                                 // Guardar datos del usuario en la base de datos Firebase
                                 guardarDatosUsuarioFirebase(user.getUid(), nombre, correo, contraseña);
-                                // Ir al Activity principal
                                 startActivity(new Intent(RegistroActivity.this, MenuPrincipal.class));
                                 Toast.makeText(getApplicationContext(), "Bienvenido, " + nombre, Toast.LENGTH_SHORT).show();
-                                finish(); // Cerrar la actividad actual
+                                finish();
                             }
                         } else {
-                            // Si falla el registro, mostrar mensaje de error
                             try {
                                 throw task.getException();
                             } catch (FirebaseAuthUserCollisionException e) {
-                                // Si el correo ya está registrado, mostrar mensaje y ofrecer iniciar sesión
                                 Toast.makeText(getApplicationContext(), "Correo electrónico ya registrado, ¿quieres iniciar sesión?", Toast.LENGTH_LONG).show();
-                                // Aquí podrías abrir la actividad de inicio de sesión
                             } catch (Exception e) {
-                                // Cualquier otro error
                                 Toast.makeText(getApplicationContext(), "Error al registrar: " + e.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         }
@@ -135,11 +130,8 @@ public class RegistroActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        // Datos de usuario guardados exitosamente en la base de datos
                         if (task.isSuccessful()) {
-
                         } else {
-                            // Error al guardar datos del usuario
                             Toast.makeText(getApplicationContext(), "Error al guardar datos del usuario", Toast.LENGTH_SHORT).show();
                         }
                     }

@@ -148,7 +148,6 @@ public class TareasFragment extends Fragment {
                 Tarea tarea = new Tarea(id, calendarioId, titulo, contenido, fecha); // Cambia calendarioId a String
                 listaTareas.add(tarea);
             } while (cursor.moveToNext());
-            // Cerrar el cursor
             cursor.close();
         }
 

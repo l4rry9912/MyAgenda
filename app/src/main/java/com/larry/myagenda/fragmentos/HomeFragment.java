@@ -132,8 +132,6 @@ public class HomeFragment extends Fragment {
                     Calendario calendario = new Calendario(id, nombre, iconoRuta, color);
                     calendarioList.add(calendario);
                 } while (cursor.moveToNext());
-
-                // Cerrar el cursor después de usarlo
                 cursor.close();
             }
             if (adapter == null) {
@@ -207,7 +205,6 @@ public class HomeFragment extends Fragment {
 
 
             } else {
-                // Notificar al adaptador sobre los cambios en los datos
                 adapter.notifyDataSetChanged();
             }
         }

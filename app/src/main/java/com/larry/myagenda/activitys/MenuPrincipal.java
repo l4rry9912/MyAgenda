@@ -81,7 +81,6 @@ public class MenuPrincipal extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container);
         if (fragment instanceof NotasFragment || fragment instanceof HomeFragment || fragment instanceof AjustesFragment) {
-            // Mueve la tarea de la aplicación a un segundo plano
             moveTaskToBack(true);
         } else {
             super.onBackPressed();

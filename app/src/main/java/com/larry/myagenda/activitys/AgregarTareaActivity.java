@@ -90,8 +90,6 @@ public class AgregarTareaActivity extends AppCompatActivity {
             // Error al guardar la tarea
             Toast.makeText(this, "Error al guardar la tarea", Toast.LENGTH_SHORT).show();
         }
-
-        // Volver a la actividad anterior
         finish();
     }
 }
